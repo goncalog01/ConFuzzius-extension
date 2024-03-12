@@ -16,6 +16,7 @@ class FuzzingEnvironment:
         self.memoized_symbolic_execution = dict()
 
         self.individual_branches = dict()
+        self.individual_code_coverage = dict()
 
         self.data_dependencies = dict()
 

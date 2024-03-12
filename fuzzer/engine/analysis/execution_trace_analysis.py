@@ -116,6 +116,7 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
         # Initialize metric
         branches = {}
         indv.data_dependencies = []
+        env.individual_code_coverage[indv.hash] = set()
         contract_address = None
 
         env.detector_executor.initialize_detectors()
@@ -176,6 +177,7 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
 
                 # Code coverage
                 env.code_coverage.add(hex(instruction["pc"]))
+                env.individual_code_coverage[indv.hash].add(hex(instruction["pc"]))
 
                 # Dynamically build control flow graph
                 if env.cfg:

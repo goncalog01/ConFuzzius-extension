@@ -33,3 +33,6 @@ def compute_data_dependency_fitness(indv, data_dependencies):
                     data_dependency_fitness += 1
 
     return data_dependency_fitness
+
+def compute_code_coverage_fitness(indv, env):
+    return float(len(env.individual_code_coverage[indv.hash]))
