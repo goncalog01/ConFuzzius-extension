@@ -17,6 +17,7 @@ class FuzzingEnvironment:
 
         self.individual_branches = dict()
         self.individual_code_coverage = dict()
+        self.individual_vulnerabilities_detected = dict()
 
         self.data_dependencies = dict()
 

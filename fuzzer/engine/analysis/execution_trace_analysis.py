@@ -117,6 +117,7 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
         branches = {}
         indv.data_dependencies = []
         env.individual_code_coverage[indv.hash] = set()
+        env.individual_vulnerabilities_detected[indv.hash] = 0.0
         contract_address = None
 
         env.detector_executor.initialize_detectors()

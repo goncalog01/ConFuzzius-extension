@@ -2,11 +2,14 @@
 # -*- coding: utf-8 -*-
 
 def fitness_function(indv, env):
+    """
     block_coverage_fitness = compute_branch_coverage_fitness(env.individual_branches[indv.hash], env.code_coverage)
     if env.args.data_dependency:
         data_dependency_fitness = compute_data_dependency_fitness(indv, env.data_dependencies)
         return block_coverage_fitness + data_dependency_fitness
     return block_coverage_fitness
+    """
+    return compute_vulnerability_fitness(indv, env)
 
 def compute_branch_coverage_fitness(branches, pcs):
     non_visited_branches = 0.0
@@ -36,3 +39,6 @@ def compute_data_dependency_fitness(indv, data_dependencies):
 
 def compute_code_coverage_fitness(indv, env):
     return float(len(env.individual_code_coverage[indv.hash]))
+
+def compute_vulnerability_fitness(indv, env):
+    return env.individual_vulnerabilities_detected[indv.hash]

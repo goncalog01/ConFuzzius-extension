@@ -107,6 +107,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.assertion_failure_detector.detect_assertion_failure(current_instruction, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Assertion Failure", individual, mfe, self.assertion_failure_detector, self.source_map):
@@ -128,6 +129,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index, type = self.integer_overflow_detector.detect_integer_overflow(mfe, tainted_record, previous_instruction, current_instruction, individual, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Integer Overflow", individual, mfe, self.integer_overflow_detector, self.source_map):
@@ -154,6 +156,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.reentrancy_detector.detect_reentrancy(tainted_record, current_instruction, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Reentrancy", individual, mfe, self.reentrancy_detector, self.source_map):
@@ -175,6 +178,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.transaction_order_dependency_detector.detect_transaction_order_dependency(current_instruction, tainted_record, individual, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Transaction Order Dependency", individual, mfe, self.transaction_order_dependency_detector, self.source_map):
@@ -196,6 +200,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.block_dependency_detector.detect_block_dependency(tainted_record, current_instruction, previous_branch, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Block Dependency", individual, mfe, self.block_dependency_detector, self.source_map):
@@ -217,6 +222,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.unchecked_return_value_detector.detect_unchecked_return_value(previous_instruction, current_instruction, tainted_record, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Unchecked Return Value", individual, mfe, self.unchecked_return_value_detector, self.source_map):
@@ -238,6 +244,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.unsafe_delegatecall_detector.detect_unsafe_delegatecall(current_instruction, tainted_record, individual, previous_instruction, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Unsafe Delegatecall", individual, mfe, self.unsafe_delegatecall_detector, self.source_map):
@@ -259,6 +266,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.leaking_ether_detector.detect_leaking_ether(current_instruction, tainted_record, individual, transaction_index, previous_branch)
         if pc and DetectorExecutor.add_error(errors, pc, "Leaking Ether", individual, mfe, self.leaking_ether_detector, self.source_map):
@@ -280,6 +288,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.locking_ether_detector.detect_locking_ether(mfe.cfg, current_instruction, individual, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Locking Ether", individual, mfe, self.locking_ether_detector, self.source_map):
@@ -301,6 +310,7 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
 
         pc, index = self.unprotected_selfdestruct_detector.detect_unprotected_selfdestruct(current_instruction, tainted_record, individual, transaction_index)
         if pc and DetectorExecutor.add_error(errors, pc, "Unprotected Selfdestruct", individual, mfe, self.unprotected_selfdestruct_detector, self.source_map):
@@ -322,3 +332,4 @@ class DetectorExecutor:
             self.logger.title(color+"Transaction sequence:")
             self.logger.title(color+"-----------------------------------------------------")
             print_individual_solution_as_transaction(self.logger, individual.solution, color, self.function_signature_mapping, index)
+            mfe.individual_vulnerabilities_detected[individual.hash] += 1
