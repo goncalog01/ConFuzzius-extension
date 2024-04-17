@@ -2,14 +2,11 @@
 # -*- coding: utf-8 -*-
 
 def fitness_function(indv, env):
-    """
     block_coverage_fitness = compute_branch_coverage_fitness(env.individual_branches[indv.hash], env.code_coverage)
     if env.args.data_dependency:
         data_dependency_fitness = compute_data_dependency_fitness(indv, env.data_dependencies)
         return block_coverage_fitness + data_dependency_fitness
     return block_coverage_fitness
-    """
-    return compute_vulnerability_fitness(indv, env)
 
 def compute_branch_coverage_fitness(branches, pcs):
     non_visited_branches = 0.0
@@ -42,3 +39,14 @@ def compute_code_coverage_fitness(indv, env):
 
 def compute_vulnerability_fitness(indv, env):
     return env.individual_vulnerabilities_detected[indv.hash]
+
+def compute_branch_distance(indv, env):
+    branch_distance = 0.0
+    for jumpi_pc in env.visited_branches:
+        if len(env.visited_branches[jumpi_pc]) == 2:
+            continue
+        elif 0 not in env.visited_branches[jumpi_pc] and jumpi_pc in env.individual_branch_distances[indv.hash] and 0 in env.individual_branch_distances[indv.hash][jumpi_pc]:
+            branch_distance += env.individual_branch_distances[indv.hash][jumpi_pc][0]
+        elif 1 not in env.visited_branches[jumpi_pc] and jumpi_pc in env.individual_branch_distances[indv.hash] and 1 in env.individual_branch_distances[indv.hash][jumpi_pc]:
+            branch_distance += env.individual_branch_distances[indv.hash][jumpi_pc][1]
+    return branch_distance

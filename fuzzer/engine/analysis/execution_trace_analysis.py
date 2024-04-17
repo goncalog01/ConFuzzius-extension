@@ -118,6 +118,7 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
         indv.data_dependencies = []
         env.individual_code_coverage[indv.hash] = set()
         env.individual_vulnerabilities_detected[indv.hash] = 0.0
+        env.individual_branch_distances[indv.hash] = dict()
         contract_address = None
 
         env.detector_executor.initialize_detectors()
@@ -200,18 +201,23 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
                         env.visited_branches[jumpi_pc] = {}
                     if jumpi_pc not in branches:
                         branches[jumpi_pc] = dict()
+                    if jumpi_pc not in env.individual_branch_distances[indv.hash]:
+                        env.individual_branch_distances[indv.hash][jumpi_pc] = dict()
 
                     destination = convert_stack_value_to_int(instruction["stack"][-1])
                     jumpi_condition = convert_stack_value_to_int(instruction["stack"][-2])
+                    branch_distance = self.compute_branch_distance(result.trace[i - 2])
 
                     if jumpi_condition == 0:
                         # don't jump, but increase pc
                         branches[jumpi_pc][hex(destination)] = False
                         branches[jumpi_pc][hex(instruction["pc"] + 1)] = True
+                        env.individual_branch_distances[indv.hash][jumpi_pc][int(not jumpi_condition)] = branch_distance
                     else:
                         # jump to destination
                         branches[jumpi_pc][hex(destination)] = True
                         branches[jumpi_pc][hex(instruction["pc"] + 1)] = False
+                        env.individual_branch_distances[indv.hash][jumpi_pc][int(not jumpi_condition)] = -branch_distance
 
                     env.visited_branches[jumpi_pc][jumpi_condition] = {}
                     env.visited_branches[jumpi_pc][jumpi_condition]["indv_hash"] = indv.hash
@@ -764,3 +770,21 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
 
         diff = list(set(self.env.code_coverage).symmetric_difference(set([hex(x) for x in self.env.overall_pcs])))
         self.logger.debug("Instructions not executed: %s", sorted(diff))
+
+    def compute_branch_distance(self, instruction):
+        op1 = None
+        if len(instruction["stack"]) > 0:
+            op1 = convert_stack_value_to_int(instruction["stack"][-1])
+
+        op2 = None
+        if len(instruction["stack"]) > 1:
+            op2 = convert_stack_value_to_int(instruction["stack"][-2])
+
+        if instruction["op"] == "LT" or instruction["op"] == "SLT":
+            return op1 - op2
+        elif instruction["op"] == "GT" or instruction["op"] == "SGT":
+            return op2 - op1
+        elif instruction["op"] == "EQ":
+            return abs(op1 - op2)
+        elif instruction["op"] == "ISZERO":
+            return abs(op1)
