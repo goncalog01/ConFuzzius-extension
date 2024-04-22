@@ -217,7 +217,7 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
                         # jump to destination
                         branches[jumpi_pc][hex(destination)] = True
                         branches[jumpi_pc][hex(instruction["pc"] + 1)] = False
-                        env.individual_branch_distances[indv.hash][jumpi_pc][int(not jumpi_condition)] = -branch_distance
+                        env.individual_branch_distances[indv.hash][jumpi_pc][int(not jumpi_condition)] = 1 - branch_distance
 
                     env.visited_branches[jumpi_pc][jumpi_condition] = {}
                     env.visited_branches[jumpi_pc][jumpi_condition]["indv_hash"] = indv.hash
