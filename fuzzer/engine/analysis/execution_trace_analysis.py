@@ -179,7 +179,7 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
 
                 # Code coverage
                 env.code_coverage.add(hex(instruction["pc"]))
-                env.individual_code_coverage[indv.hash].add(hex(instruction["pc"]))
+                env.individual_code_coverage[indv.hash].add(instruction["pc"])
 
                 # Dynamically build control flow graph
                 if env.cfg:
