@@ -289,9 +289,24 @@ def launch_argument_parser():
     parser.add_argument("--rpc-host", help="Ethereum client RPC hostname.", action="store", dest="rpc_host", type=str)
     parser.add_argument("--rpc-port", help="Ethereum client RPC port.", action="store", dest="rpc_port", type=int)
 
+    parser.add_argument("--branch-coverage",
+                        help="Disable/Enable branch coverage fitness: 0 - Disable, 1 - Enable (default: 0)", action="store",
+                        dest="branch_coverage", type=int)
     parser.add_argument("--data-dependency",
-                        help="Disable/Enable data dependency analysis: 0 - Disable, 1 - Enable (default: 1)", action="store",
+                        help="Disable/Enable data dependency analysis: 0 - Disable, 1 - Enable (default: 0)", action="store",
                         dest="data_dependency", type=int)
+    parser.add_argument("--code-coverage",
+                        help="Disable/Enable code coverage fitness: 0 - Disable, 1 - Enable (default: 0)", action="store",
+                        dest="code_coverage", type=int)
+    parser.add_argument("--vulnerability-fitness",
+                        help="Disable/Enable vulnerability fitness: 0 - Disable, 1 - Enable (default: 0)", action="store",
+                        dest="vulnerability_fitness", type=int)
+    parser.add_argument("--branch-distance",
+                        help="Disable/Enable branch distance fitness: 0 - Disable, 1 - Enable (default: 0)", action="store",
+                        dest="branch_distance", type=int)
+    parser.add_argument("--code-distance",
+                        help="Disable/Enable code distance fitness: 0 - Disable, 1 - Enable (default: 0)", action="store",
+                        dest="code_distance", type=int)
     parser.add_argument("--constraint-solving",
                         help="Disable/Enable constraint solving: 0 - Disable, 1 - Enable (default: 1)", action="store",
                         dest="constraint_solving", type=int)
@@ -342,8 +357,18 @@ def launch_argument_parser():
     if args.probability_mutation:
         settings.PROBABILITY_MUTATION = args.probability_mutation
 
+    if args.branch_coverage == None:
+        args.branch_coverage = 0
     if args.data_dependency == None:
-        args.data_dependency = 1
+        args.data_dependency = 0
+    if args.code_coverage == None:
+        args.code_coverage = 0
+    if args.vulnerability_fitness == None:
+        args.vulnerability_fitness = 0
+    if args.branch_distance == None:
+        args.branch_distance = 0
+    if args.code_distance == None:
+        args.code_distance = 0
     if args.constraint_solving == None:
         args.constraint_solving = 1
     if args.environmental_instrumentation == None:
