@@ -14,4 +14,4 @@ RUN wget https://github.com/Z3Prover/z3/archive/Z3-4.8.5.zip && unzip Z3-4.8.5.z
 WORKDIR /root
 COPY examples examples
 COPY fuzzer fuzzer
-RUN cd fuzzer && pip3 install -r requirements.txt
+RUN cd fuzzer && pip3 install cython && pip3 install cytoolz && pip3 install -r requirements.txt

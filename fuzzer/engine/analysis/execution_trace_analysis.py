@@ -206,7 +206,7 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
 
                     destination = convert_stack_value_to_int(instruction["stack"][-1])
                     jumpi_condition = convert_stack_value_to_int(instruction["stack"][-2])
-                    branch_distance = self.compute_branch_distance(result.trace[i - 2])
+                    branch_distance = self.compute_branch_distance(result.trace, i)
 
                     if jumpi_condition == 0:
                         # don't jump, but increase pc
@@ -771,20 +771,25 @@ class ExecutionTraceAnalyzer(OnTheFlyAnalysis):
         diff = list(set(self.env.code_coverage).symmetric_difference(set([hex(x) for x in self.env.overall_pcs])))
         self.logger.debug("Instructions not executed: %s", sorted(diff))
 
-    def compute_branch_distance(self, instruction):
-        op1 = None
-        if len(instruction["stack"]) > 0:
-            op1 = convert_stack_value_to_int(instruction["stack"][-1])
+    def compute_branch_distance(self, trace, index):
+        while index >= 0:
+            instruction = trace[index]
 
-        op2 = None
-        if len(instruction["stack"]) > 1:
-            op2 = convert_stack_value_to_int(instruction["stack"][-2])
+            op1 = None
+            if len(instruction["stack"]) > 0:
+                op1 = convert_stack_value_to_int(instruction["stack"][-1])
 
-        if instruction["op"] == "LT" or instruction["op"] == "SLT":
-            return op1 - op2
-        elif instruction["op"] == "GT" or instruction["op"] == "SGT":
-            return op2 - op1
-        elif instruction["op"] == "EQ":
-            return abs(op1 - op2)
-        elif instruction["op"] == "ISZERO":
-            return abs(op1)
+            op2 = None
+            if len(instruction["stack"]) > 1:
+                op2 = convert_stack_value_to_int(instruction["stack"][-2])
+
+            if instruction["op"] == "LT" or instruction["op"] == "SLT":
+                return op1 - op2
+            elif instruction["op"] == "GT" or instruction["op"] == "SGT":
+                return op2 - op1
+            elif instruction["op"] == "EQ":
+                return abs(op1 - op2)
+            elif instruction["op"] == "ISZERO":
+                return abs(op1)
+            else:
+                index -= 1
