@@ -1,0 +1,38 @@
+----- Errors -----
+BecToken.sol - [['Integer Overflow', 264]]
+ReturnValue.sol - [['Unchecked Return Value', 17]]
+SimpleDAO.sol - [['Reentrancy', 19], ['Unchecked Return Value', 19]]
+SmartBillions.sol - [['Assertion Failure', 11], ['Assertion Failure', 172], ['Assertion Failure', 172], ['Block Dependency', 647], ['Assertion Failure', 155], ['Block Dependency', 646], ['Assertion Failure', 172], ['Block Dependency', 626], ['Assertion Failure', 172], ['Block Dependency', 517], ['Assertion Failure', 177], ['Block Dependency', 550], ['Block Dependency', 618], ['Block Dependency', 306], ['Block Dependency', 323], ['Assertion Failure', 268], ['Assertion Failure', 172], ['Block Dependency', 552], ['Assertion Failure', 279]]
+Rubixi.sol - [['Assertion Failure', 141]]
+EtherLotto.sol - [['Assertion Failure', 36]]
+Government.sol - [['Assertion Failure', 16], ['Block Dependency', 35], ['Unchecked Return Value', 82], ['Assertion Failure', 17]]
+ERC20.sol - []
+OpenAddressLottery.sol - []
+MyToken.sol - []
+Total errors: 29
+
+----- Mean -----
+Instruction coverage: 68.0239156938259
+Branch coverage: 77.6275647936209
+Time to final instruction coverage (s): 7.391510407129924
+Time to final branch coverage (s): 7.420379225413004
+Time to bug (s): 9.967119504665506
+Total transaction to bug: 485.8965517241379
+Unique transaction to bug: 196.44827586206895
+Transactions executed per second: 116.77505408842653
+Percentage of unique transactions generated: 27.843142451930365
+Memory consumption (MB): 88.20260416666666
+Execution time (s): 11.515981912612915
+
+----- Standard Deviation -----
+Instruction coverage: 19.73459828909066
+Branch coverage: 13.501814949479565
+Time to final instruction coverage (s): 22.69079693491841
+Time to final branch coverage (s): 22.681673353997777
+Time to bug (s): 19.090542406200033
+Total transaction to bug: 720.6319231124854
+Unique transaction to bug: 201.3935221721131
+Transactions executed per second: 34.80801661086025
+Percentage of unique transactions generated: 6.480459304634811
+Memory consumption (MB): 30.498900308986695
+Execution time (s): 29.567479937622647

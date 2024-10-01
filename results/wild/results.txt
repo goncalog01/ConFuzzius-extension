@@ -1,0 +1,142 @@
+- Intruction coverage
+branch distance + data dependency: 89.31965199341073
+data dependency: 88.92272618338087
+branch coverage: 88.63411273353185
+code coverage + data dependency: 88.63260828298915
+vulnerability fitness: 88.56884734365865
+vulnerability fitness + data dependency: 88.5280514882661
+branch coverage + data dependency: 88.50666692267394
+code coverage: 88.29242436074415
+branch distance: 87.94237719499446
+code distance: 83.52379711430106
+code distance + data dependency: 82.90150874114015
+
+- Branch coverage
+branch distance + data dependency: 87.24914545506232
+data dependency: 86.7739334270768
+code coverage: 86.70484770912185
+branch coverage + data dependency: 86.62400784422218
+vulnerability fitness + data dependency: 86.59218281437325
+vulnerability fitness: 86.5880121795826
+code coverage + data dependency: 86.55961080901493
+branch coverage: 86.47538860117832
+branch distance: 86.32389982869054
+code distance: 82.78932486298677
+code distance + data dependency: 82.58088978760055
+
+- Time to final instruction coverage
+branch coverage: 126.09956340300731
+branch distance: 132.76946911750696
+code coverage: 132.9178946537849
+data dependency: 133.32626167321817
+branch distance + data dependency: 135.9974162795327
+branch coverage + data dependency: 137.65162295490117
+vulnerability fitness + data dependency: 143.44198051251863
+code coverage + data dependency: 143.5222695431152
+vulnerability fitness: 146.0165862762011
+code distance: 176.48998309436598
+code distance + data dependency: 185.96515966716566
+
+- Time to final branch coverage
+branch coverage: 119.05042838744627
+code coverage: 132.66005268769388
+data dependency: 135.19056685459918
+branch distance + data dependency: 135.76436284610205
+branch distance: 136.33676219597842
+branch coverage + data dependency: 140.96736000110576
+vulnerability fitness + data dependency: 145.79285837160913
+vulnerability fitness: 145.9654461970696
+code coverage + data dependency: 150.65121552232023
+code distance: 208.38845249853637
+code distance + data dependency: 215.99484749216782
+
+- Time to bug
+code coverage: 9.44921303349872
+branch distance + data dependency: 10.018119989439498
+branch coverage: 11.159973172914414
+data dependency: 11.724169054696727
+code coverage + data dependency: 12.610957622528076
+vulnerability fitness: 13.720125403515128
+vulnerability fitness + data dependency: 14.113391442732377
+branch coverage + data dependency: 14.336006343364716
+branch distance: 15.301253394382757
+code distance: 28.822451771759404
+code distance + data dependency: 33.4549655274647
+
+- Total transaction to bug
+code distance + data dependency: 319.609756097561
+code distance: 384.1951219512195
+branch distance + data dependency: 395.72093023255815
+code coverage: 419.04651162790697
+branch coverage: 513.2142857142857
+branch coverage + data dependency: 514.2954545454545
+code coverage + data dependency: 521.75
+data dependency: 547.1395348837209
+vulnerability fitness + data dependency: 674
+vulnerability fitness: 698.4883720930233
+branch distance: 741.0731707317074
+
+- Unique transaction to bug
+code distance + data dependency: 100.60975609756098
+code distance: 122.14634146341463
+branch distance + data dependency: 122.4186046511628
+code coverage: 134.34883720930233
+branch coverage + data dependency: 149.20454545454547
+code coverage + data dependency: 154.22727272727272
+data dependency: 156.04651162790697
+branch coverage: 162.42857142857142
+vulnerability fitness + data dependency: 168.22727272727272
+vulnerability fitness: 195.95348837209303
+branch distance: 224.29268292682926
+
+- Transactions executed per second
+vulnerability fitness: 65.7944384765234
+branch distance: 64.66062535552605
+branch coverage: 62.98059159376723
+data dependency: 58.81409962419739
+code coverage: 56.52926815293445
+vulnerability fitness + data dependency: 55.54435165214119
+code coverage + data dependency: 53.83872905695397
+branch distance + data dependency: 53.59047396245602
+branch coverage + data dependency: 49.975082062159096
+code distance: 44.5308782132526
+code distance + data dependency: 35.26731931801208
+
+- Percentage of unique transactions generated
+code distance + data dependency: 23.854429746042662
+code distance: 21.871785104826007
+code coverage: 20.478309284568212
+branch coverage: 19.533148107336412
+vulnerability fitness: 19.19315425703911
+branch distance: 18.828318175153754
+branch distance + data dependency: 18.54199089614388
+branch coverage + data dependency: 18.296582047646613
+code coverage + data dependency: 17.764351697574313
+data dependency: 17.467119316433745
+vulnerability fitness + data dependency: 17.3280520884086
+
+- Memory consumption
+code distance: 107.98158482142857
+code distance + data dependency: 109.30453330592105
+branch distance + data dependency: 188.00666065705127
+branch distance: 188.48497596153845
+vulnerability fitness: 194.75165264423077
+branch coverage + data dependency: 196.43870192307693
+vulnerability fitness + data dependency: 208.12910657051282
+branch coverage: 210.29637419871796
+data dependency: 211.08143028846155
+code coverage + data dependency: 216.99644431089743
+code coverage: 225.80078125
+
+- Bugs found
+vulnerability fitness + data dependency: 200
+data dependency: 195
+code coverage + data dependency: 194
+vulnerability fitness: 193
+code coverage: 188
+branch coverage + data dependency: 187
+branch distance + data dependency: 187
+branch distance: 185
+branch coverage: 183
+code distance + data dependency: 121
+code distance: 119

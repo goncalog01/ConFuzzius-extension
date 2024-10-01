@@ -1,0 +1,38 @@
+----- Errors -----
+BecToken.sol - [['Integer Overflow', 264]]
+ReturnValue.sol - [['Unchecked Return Value', 17]]
+SimpleDAO.sol - [['Reentrancy', 19], ['Unchecked Return Value', 19]]
+SmartBillions.sol - [['Block Dependency', 647], ['Assertion Failure', 172], ['Assertion Failure', 11], ['Assertion Failure', 146], ['Assertion Failure', 172], ['Assertion Failure', 172], ['Assertion Failure', 155], ['Block Dependency', 323], ['Block Dependency', 626], ['Block Dependency', 646], ['Assertion Failure', 100], ['Assertion Failure', 177], ['Assertion Failure', 172], ['Assertion Failure', 279], ['Block Dependency', 618], ['Transaction Order Dependency', 647]]
+Rubixi.sol - [['Assertion Failure', 141], ['Assertion Failure', 158]]
+EtherLotto.sol - [['Assertion Failure', 36], ['Transaction Order Dependency', 39], ['Block Dependency', 43]]
+Government.sol - [['Assertion Failure', 17], ['Assertion Failure', 16], ['Block Dependency', 35], ['Unchecked Return Value', 82], ['Assertion Failure', 39], ['Unchecked Return Value', 37]]
+ERC20.sol - []
+OpenAddressLottery.sol - []
+MyToken.sol - []
+Total errors: 31
+
+----- Mean -----
+Instruction coverage: 76.38086877625233
+Branch coverage: 82.12371576984252
+Time to final instruction coverage (s): 12.659740352630616
+Time to final branch coverage (s): 12.659740352630616
+Time to bug (s): 12.183821985798497
+Total transaction to bug: 445.7096774193548
+Unique transaction to bug: 178.32258064516128
+Transactions executed per second: 104.22962608583305
+Percentage of unique transactions generated: 24.846446964877895
+Memory consumption (MB): 89.553125
+Execution time (s): 18.230023050308226
+
+----- Standard Deviation -----
+Instruction coverage: 20.935027692143116
+Branch coverage: 13.701554330619857
+Time to final instruction coverage (s): 40.23664390661164
+Time to final branch coverage (s): 40.23664390661164
+Time to bug (s): 29.63985736882107
+Total transaction to bug: 794.5341176437271
+Unique transaction to bug: 223.4251533904225
+Transactions executed per second: 48.38328466550813
+Percentage of unique transactions generated: 3.9573412675789914
+Memory consumption (MB): 28.25584054352239
+Execution time (s): 44.25020229005366

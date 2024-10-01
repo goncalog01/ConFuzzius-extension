@@ -1,0 +1,38 @@
+----- Errors -----
+BecToken.sol - [['Integer Overflow', 264], ['Integer Overflow', 264]]
+ReturnValue.sol - [['Unchecked Return Value', 17]]
+SimpleDAO.sol - [['Reentrancy', 19], ['Unchecked Return Value', 19]]
+SmartBillions.sol - [['Block Dependency', 647], ['Assertion Failure', 11], ['Assertion Failure', 146], ['Assertion Failure', 155], ['Block Dependency', 646], ['Assertion Failure', 177], ['Assertion Failure', 172], ['Assertion Failure', 172], ['Assertion Failure', 172], ['Block Dependency', 323], ['Block Dependency', 550], ['Assertion Failure', 172], ['Assertion Failure', 172], ['Block Dependency', 517], ['Block Dependency', 618], ['Assertion Failure', 279], ['Assertion Failure', 268], ['Block Dependency', 626], ['Block Dependency', 552]]
+Rubixi.sol - [['Assertion Failure', 141], ['Assertion Failure', 158]]
+EtherLotto.sol - [['Assertion Failure', 36], ['Transaction Order Dependency', 39], ['Block Dependency', 43]]
+Government.sol - [['Block Dependency', 35], ['Unchecked Return Value', 82], ['Assertion Failure', 17], ['Assertion Failure', 16], ['Assertion Failure', 39], ['Unchecked Return Value', 37]]
+ERC20.sol - []
+OpenAddressLottery.sol - [['Block Dependency', 63], ['Block Dependency', 79]]
+MyToken.sol - []
+Total errors: 37
+
+----- Mean -----
+Instruction coverage: 76.3675606856936
+Branch coverage: 83.92835354420795
+Time to final instruction coverage (s): 14.007899888356526
+Time to final branch coverage (s): 14.007899888356526
+Time to bug (s): 17.12121727015521
+Total transaction to bug: 657.9459459459459
+Unique transaction to bug: 225.1891891891892
+Transactions executed per second: 99.88827440522235
+Percentage of unique transactions generated: 24.626262564758754
+Memory consumption (MB): 89.6
+Execution time (s): 17.781958246231078
+
+----- Standard Deviation -----
+Instruction coverage: 20.362694033430547
+Branch coverage: 12.738180353684845
+Time to final instruction coverage (s): 43.844975206569046
+Time to final branch coverage (s): 43.844975206569046
+Time to bug (s): 32.98483245565474
+Total transaction to bug: 913.9592795336819
+Unique transaction to bug: 241.81004805959952
+Transactions executed per second: 44.27493315230032
+Percentage of unique transactions generated: 3.8864440821686372
+Memory consumption (MB): 29.81794487260618
+Execution time (s): 43.05554906027982

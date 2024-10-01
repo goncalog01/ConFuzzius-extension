@@ -1,0 +1,38 @@
+----- Errors -----
+BecToken.sol - []
+ReturnValue.sol - [['Unchecked Return Value', 17]]
+SimpleDAO.sol - [['Reentrancy', 19], ['Unchecked Return Value', 19]]
+SmartBillions.sol - [['Assertion Failure', 172], ['Block Dependency', 647], ['Assertion Failure', 172], ['Assertion Failure', 155], ['Assertion Failure', 172], ['Assertion Failure', 172], ['Assertion Failure', 146], ['Assertion Failure', 11], ['Block Dependency', 618], ['Assertion Failure', 177], ['Block Dependency', 550], ['Assertion Failure', 100], ['Block Dependency', 626], ['Block Dependency', 646], ['Assertion Failure', 279]]
+Rubixi.sol - [['Assertion Failure', 141]]
+EtherLotto.sol - [['Assertion Failure', 36], ['Block Dependency', 43]]
+Government.sol - [['Assertion Failure', 16], ['Block Dependency', 35], ['Unchecked Return Value', 82], ['Assertion Failure', 17], ['Assertion Failure', 39], ['Unchecked Return Value', 37]]
+ERC20.sol - []
+OpenAddressLottery.sol - []
+MyToken.sol - []
+Total errors: 27
+
+----- Mean -----
+Instruction coverage: 73.02718480894353
+Branch coverage: 78.65556284448228
+Time to final instruction coverage (s): 277.17533065478005
+Time to final branch coverage (s): 277.1818535963694
+Time to bug (s): 618.2323879224283
+Total transaction to bug: 341.6296296296296
+Unique transaction to bug: 151.96296296296296
+Transactions executed per second: 91.74681791877269
+Percentage of unique transactions generated: 23.002117272258985
+Memory consumption (MB): 85.284375
+Execution time (s): 571.477489789327
+
+----- Standard Deviation -----
+Instruction coverage: 20.232096627204573
+Branch coverage: 13.502510644005149
+Time to final instruction coverage (s): 1019.438209999381
+Time to final branch coverage (s): 1019.4364371529045
+Time to bug (s): 1091.3091348828907
+Total transaction to bug: 469.4451530420542
+Unique transaction to bug: 149.68225147303093
+Transactions executed per second: 72.80070884726865
+Percentage of unique transactions generated: 3.7615924405159893
+Memory consumption (MB): 23.81805478805351
+Execution time (s): 2061.9820645256023

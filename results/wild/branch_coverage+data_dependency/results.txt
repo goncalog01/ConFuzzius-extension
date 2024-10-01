@@ -1,0 +1,54 @@
+----- Errors -----
+0xfa7282dc24e7113bc35d8a6616e4a8addbf9a9ec.sol - [['Integer Overflow', 37], ['Assertion Failure', 38], ['Unchecked Return Value', 314]]
+0xa7a5dc2e89511c1ba1aa0eae97f5802c65e57f01.sol - []
+0xedd90e33782a43f1664ec2926d1fc316ec97d0f5.sol - []
+0xfed347e43835da08f8a00654fb4b38bb1c46e071.sol - [['Unchecked Return Value', 134]]
+0x96c833e43488c986676e9f6b3b8781812629bbb5.sol - [['Assertion Failure', 193], ['Assertion Failure', 111], ['Assertion Failure', 87], ['Assertion Failure', 86], ['Assertion Failure', 167], ['Assertion Failure', 195], ['Assertion Failure', 113], ['Assertion Failure', 112], ['Assertion Failure', 204], ['Assertion Failure', 111], ['Assertion Failure', 87], ['Assertion Failure', 86], ['Assertion Failure', 113]]
+0x6b4d6666156a2921850527aa00e47047857159d2.sol - []
+0x8c67606edda2b0e0c3334f7f7a2adbf4688e42ea.sol - [['Unchecked Return Value', 53]]
+0xd58297b5e0ad69f6ba949fdde9da0f2b978f00a0.sol - [['Assertion Failure', 13], ['Transaction Order Dependency', 134]]
+0x435ad5cae6ea3e065ce540464366b71fba8f0c52.sol - [['Unchecked Return Value', 63], ['Unchecked Return Value', 63], ['Unchecked Return Value', 204], ['Assertion Failure', 178], ['Block Dependency', 172], ['Unchecked Return Value', 186], ['Block Dependency', 178]]
+0x614348d080835adcbbdee121af077024e27eccc6.sol - [['Unchecked Return Value', 1], ['Reentrancy', 1], ['Unchecked Return Value', 1], ['Integer Overflow', 123], ['Assertion Failure', 124], ['Unchecked Return Value', 1], ['Reentrancy', 1], ['Assertion Failure', 445], ['Integer Overflow', 123], ['Assertion Failure', 124], ['Reentrancy', 1], ['Unchecked Return Value', 1], ['Unchecked Return Value', 1], ['Reentrancy', 1], ['Assertion Failure', 445], ['Integer Overflow', 123], ['Assertion Failure', 124], ['Reentrancy', 1], ['Unchecked Return Value', 1], ['Unchecked Return Value', 1], ['Assertion Failure', 445], ['Integer Overflow', 123], ['Assertion Failure', 124], ['Unchecked Return Value', 1], ['Reentrancy', 1], ['Assertion Failure', 445], ['Integer Overflow', 123], ['Assertion Failure', 124], ['Reentrancy', 1], ['Unchecked Return Value', 1], ['Unchecked Return Value', 1], ['Reentrancy', 1], ['Assertion Failure', 445], ['Reentrancy', 1], ['Unchecked Return Value', 1], ['Integer Overflow', 123], ['Assertion Failure', 124]]
+0x253dff06982d5685009c37295678d3c568dea3e5.sol - [['Unchecked Return Value', 204]]
+0x0e9c4d8610aa2cf0dabdabb19920a1c810b65720.sol - [['Arbitrary Memory Access', 150], ['Block Dependency', 125], ['Assertion Failure', 94], ['Block Dependency', 94], ['Block Dependency', 203], ['Integer Overflow', 107], ['Integer Overflow', 133], ['Integer Overflow', 150], ['Integer Overflow', 131], ['Integer Overflow', 128], ['Assertion Failure', 173], ['Integer Overflow', 98], ['Integer Overflow', 173], ['Integer Overflow', 97], ['Unchecked Return Value', 163], ['Integer Overflow', 108], ['Integer Overflow', 111], ['Block Dependency', 115], ['Integer Overflow', 174], ['Assertion Failure', 174]]
+0xd332f2c09856322225e31723a611e5db35453a8a.sol - [['Assertion Failure', 114], ['Block Dependency', 141], ['Assertion Failure', 658], ['Block Dependency', 736], ['Assertion Failure', 815], ['Unchecked Return Value', 521], ['Unchecked Return Value', 552], ['Block Dependency', 721], ['Assertion Failure', 104], ['Block Dependency', 731], ['Block Dependency', 736], ['Block Dependency', 726], ['Transaction Order Dependency', 642], ['Unchecked Return Value', 178], ['Assertion Failure', 114], ['Block Dependency', 190], ['Block Dependency', 190], ['Integer Overflow', 119], ['Assertion Failure', 120], 'Assertion Failure', ['Block Dependency', 191], ['Block Dependency', 190], ['Integer Overflow', 121], ['Assertion Failure', 113], ['Assertion Failure', 114], ['Block Dependency', 190], ['Block Dependency', 190]]
+0x0f593dcce096c5c39bd509123150707644ad48de.sol - [['Assertion Failure', 478]]
+0x69cd4e1e2e1cec76eb7f3b1acdddaddcc6d60fc1.sol - [['Unchecked Return Value', 183], ['Block Dependency', 396], ['Block Dependency', 271], ['Assertion Failure', 135], ['Block Dependency', 408], ['Block Dependency', 266], ['Unchecked Return Value', 183], ['Block Dependency', 266], ['Assertion Failure', 140]]
+0x431304e66123115711de25149b77c67ee493e65b.sol - [['Unchecked Return Value', 143]]
+0x85b794252e7f1b2b24392a5267ff2086c0c3d7d1.sol - [['Block Dependency', 183], ['Unchecked Return Value', 221]]
+0x6d6c14d241a1c610b5d248be778c17ee57679a8f.sol - [['Block Dependency', 244], ['Unchecked Return Value', 248], ['Block Dependency', 262], ['Unchecked Return Value', 258], ['Assertion Failure', 279], ['Assertion Failure', 553], ['Unchecked Return Value', 463], ['Block Dependency', 547], ['Unchecked Return Value', 437], ['Unchecked Return Value', 491], ['Block Dependency', 436], ['Block Dependency', 197], ['Block Dependency', 204], ['Unchecked Return Value', 207], ['Unchecked Return Value', 208], ['Assertion Failure', 11]]
+0x6685b989d985a389d136519462a2b115798f6a88.sol - [['Unchecked Return Value', 133], ['Assertion Failure', 229], ['Transaction Order Dependency', 196], ['Transaction Order Dependency', 164], ['Integer Overflow', 206], ['Integer Overflow', 205], ['Integer Overflow', 148]]
+0x1595f90046de374fd4b041ee85191bf3464e8b2b.sol - [['Integer Overflow', 51]]
+0x9d96377782be3d27dc5e498e239cc84ce8480855.sol - [['Block Dependency', 98], ['Integer Overflow', 76], 'Integer Overflow', ['Integer Overflow', 65], ['Block Dependency', 248], ['Unchecked Return Value', 469], ['Unchecked Return Value', 451], ['Block Dependency', 242], ['Unchecked Return Value', 290], ['Integer Overflow', 292], ['Integer Overflow', 291], ['Block Dependency', 242], ['Unchecked Return Value', 312], ['Block Dependency', 244], ['Block Dependency', 246], ['Block Dependency', 246]]
+0xd6bef2535a424673cf9870f032aa86c880a752d5.sol - [['Integer Overflow', 44], ['Assertion Failure', 45], ['Integer Overflow', 44], ['Assertion Failure', 45]]
+0x059292d816576f2e28a2788f4a744df4425e4b70.sol - [['Block Dependency', 217], ['Block Dependency', 215], ['Unchecked Return Value', 207]]
+0x5caae332dd0a17827052de681f6f2155e00394f0.sol - [['Assertion Failure', 29], ['Block Dependency', 239], ['Assertion Failure', 23], ['Block Dependency', 231], ['Block Dependency', 235], ['Block Dependency', 249], ['Block Dependency', 292], ['Block Dependency', 196], ['Block Dependency', 311], ['Block Dependency', 173]]
+0xf9beca76ef92796cf367aa29e446387005e46e4e.sol - [['Assertion Failure', 43], ['Integer Overflow', 42], ['Assertion Failure', 16], ['Assertion Failure', 34], ['Unchecked Return Value', 261]]
+0x0c1d55e948d26c1e7a6bc9a1f93c9d15395a39f1.sol - []
+Total errors: 187
+
+----- Mean -----
+Instruction coverage: 88.50666692267394
+Branch coverage: 86.62400784422218
+Time to final instruction coverage (s): 137.65162295490117
+Time to final branch coverage (s): 140.96736000110576
+Time to bug (s): 14.336006343364716
+Total transaction to bug: 514.2954545454545
+Unique transaction to bug: 149.20454545454547
+Transactions executed per second: 49.975082062159096
+Percentage of unique transactions generated: 18.296582047646613
+Memory consumption (MB): 196.43870192307693
+Execution time (s): 448.8652047285667
+
+----- Standard Deviation -----
+Instruction coverage: 17.387963284191173
+Branch coverage: 20.955343179508972
+Time to final instruction coverage (s): 267.55815648022525
+Time to final branch coverage (s): 281.82470886534134
+Time to bug (s): 28.445362076171016
+Total transaction to bug: 903.2938608615957
+Unique transaction to bug: 205.72240558859167
+Transactions executed per second: 51.751192923119945
+Percentage of unique transactions generated: 9.446258787962643
+Memory consumption (MB): 129.41237252016137
+Execution time (s): 439.7376010726863
