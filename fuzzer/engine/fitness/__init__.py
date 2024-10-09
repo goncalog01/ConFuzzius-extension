@@ -46,7 +46,7 @@ def compute_data_dependency_fitness(indv, data_dependencies):
     return data_dependency_fitness
 
 def compute_code_coverage_fitness(indv, env):
-    return float(len(env.individual_code_coverage[indv.hash]))
+    return float(len(env.individual_new_code_coverage[indv.hash]))
 
 def compute_vulnerability_fitness(indv, env):
     return env.individual_vulnerabilities_detected[indv.hash]
@@ -78,7 +78,7 @@ def compute_code_distance_fitness(indv, env):
         return 0.0
     while len(queue) > 0:
         node, dist = queue.pop()
-        for pc in env.individual_code_coverage[indv.hash]:
+        for pc in env.individual_total_code_coverage[indv.hash]:
             if node.start_address <= pc <= node.end_address:
                 return dist
         neighbors = set()

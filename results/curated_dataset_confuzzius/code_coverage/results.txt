@@ -141,9 +141,9 @@ Instruction coverage: 91.96931920035107
 Branch coverage: 91.92567834257106
 Time to final instruction coverage (s): 37.9079158335739
 Time to final branch coverage (s): 39.772856001528154
-Time to bug (s): 2.5133489184081554
-Total transaction to bug: 163.4921875
-Unique transaction to bug: 44.6484375
+Time to bug (s): 30.77586537584241
+Total transaction to bug: 1272.172236503856
+Unique transaction to bug: 282.9974293059126
 Transactions executed per second: 62.393424200576895
 Percentage of unique transactions generated: 18.95115416179904
 Memory consumption (MB): 135.73357434006212

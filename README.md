@@ -102,8 +102,18 @@ optional arguments:
   --cfg                 Build control-flow graph and highlight code coverage.
   --rpc-host RPC_HOST   Ethereum client RPC hostname.
   --rpc-port RPC_PORT   Ethereum client RPC port.
+  --branch-coverage BRANCH_COVERAGE
+                        Disable/Enable branch coverage fitness: 0 - Disable, 1 - Enable (default: 0)
   --data-dependency DATA_DEPENDENCY
-                        Disable/Enable data dependency analysis: 0 - Disable, 1 - Enable (default: 1)
+                        Disable/Enable data dependency analysis: 0 - Disable, 1 - Enable (default: 0)
+  --code-coverage CODE_COVERAGE
+                        Disable/Enable code coverage fitness: 0 - Disable, 1 - Enable (default: 0)
+  --vulnerability-fitness VULNERABILITY_FITNESS
+                        Disable/Enable vulnerability fitness: 0 - Disable, 1 - Enable (default: 0)
+  --branch-distance BRANCH_DISTANCE
+                        Disable/Enable branch distance fitness: 0 - Disable, 1 - Enable (default: 0)
+  --code-distance CODE_DISTANCE
+                        Disable/Enable code distance fitness: 0 - Disable, 1 - Enable (default: 0)
   --constraint-solving CONSTRAINT_SOLVING
                         Disable/Enable constraint solving: 0 - Disable, 1 - Enable (default: 1)
   --environmental-instrumentation ENVIRONMENTAL_INSTRUMENTATION
